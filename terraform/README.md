@@ -95,7 +95,7 @@ This command runs the terraform plan command.
 
 Parameters:
 
-- path (string): Path the the terraform module to run the plan in
+- path (string): Path to the terraform module to run the plan in
 - workspace (string): Terraform workspace to run the command in (default: 'default')
 - label (string): An optional friendly name for the environment this plan is for. This must be set if there are multiple plans in a job with the same path and workspace.
 - backend_config_file (string): Comma separated list of terraform backend config files
@@ -111,7 +111,7 @@ This command runs the terraform apply command.
 
 Parameters:
 
-- path: Path the the terraform module to run the plan in
+- path: Path to the terraform module to run the plan in
 - workspace: Terraform workspace to run the command in (default: 'default')
 - label: An optional friendly name for the environment this apply is for. This must be the same as the label of the corresponding plan command.
 - backend_config_file: Comma separated list of terraform backend config files
@@ -129,7 +129,7 @@ This command saves the output variables from a terraform state into a json file.
 
 Parameters:
 
-- path (string): Path the the terraform module to get the outputs for
+- path (string): Path to the terraform module to get the outputs for
 - workspace (string): Terraform workspace to run the command in (default: 'default')
 - backend_config_file (string): Comma separated list of terraform backend config files
 - backend_config (string): Comma separated list of backend configs, e.g. foo=bar
@@ -143,7 +143,7 @@ manual changes to your infrastructure have been made.
 
 Parameters:
 
-- path: Path the the terraform module to run the plan in
+- path: Path to the terraform module to run the plan in
 - workspace: Terraform workspace to run the command in (default: 'default')
 - backend_config_file: Comma separated list of terraform backend config files
 - backend_config: Comma separated list of backend configs, e.g. foo=bar
@@ -157,7 +157,7 @@ This runs the terraform destroy command, destroying all resources.
 
 Parameters:
 
-- path: Path the the terraform module to destroy the resource in
+- path: Path to the terraform module to destroy the resource in
 - workspace: Terraform workspace to run the command in (default: 'default')
 - backend_config_file: Comma separated list of terraform backend config files
 - backend_config: Comma separated list of backend configs, e.g. foo=bar
@@ -215,7 +215,7 @@ The steps parameter is a nested list of steps to execute.
 
 Parameters:
 
-- path: Path the the terraform module to create a workspace in
+- path: Path to the terraform module to create a workspace in
 - workspace: Terraform workspace to destroy
 - backend_config_file: Comma separated list of terraform backend config files
 - backend_config: Comma separated list of backend configs, e.g. foo=bar
@@ -291,7 +291,7 @@ workflows:
 This configuration defines it's own plan and apply jobs which use the
 orb's plan and apply commands on multiple terraform modules. It uses
 terraform 0.12 via `terraform-0_12` executor.
-It also configures a helm repo within the the container for use with the
+It also configures a helm repo within the container for use with the
 terraform helm provider.
 
 ```yaml
